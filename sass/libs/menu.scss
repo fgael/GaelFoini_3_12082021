@@ -1,0 +1,12 @@
+header {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      position: relative;
+      margin-left: 150%;
+      font-size: 1.1rem;
+    }
+  }
+}
