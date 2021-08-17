@@ -76,6 +76,10 @@ th {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -114,45 +118,52 @@ header .placefinder {
 header h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 2.7rem 2rem 0.7rem 2rem;
+  margin: 0 2rem 0.7rem 2rem;
 }
 header p {
   font-size: 1.1rem;
   color: #656565;
-  margin-bottom: 1.9rem;
+  margin-bottom: 2.8rem;
 }
 header .restaurantexplore {
-  margin: 2rem 1rem 3.6rem 1rem;
+  margin: 2.5rem 1rem 4.6rem 1rem;
   text-align: center;
 }
 header .explorebg {
   background: #f6f6f6;
 }
-header button {
+header a {
+  text-decoration: none;
   border-radius: 2rem;
-  padding: 1.1rem 1.2rem 1.1rem 1.2rem;
+  padding: 1rem 1.2rem 1rem 1.2rem;
   background: #020024;
   background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #ff79da 100%);
   border: 1px transparent;
   color: white;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 1rem;
 }
 
-.operation h2 {
+.operationsection {
+  margin-bottom: 4.3rem;
+  margin-top: 3rem;
+}
+.operationsection h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 3rem 0 1rem 1.2rem;
+  margin: 0 0 1rem 1.2rem;
 }
-.operation .restaurantoperation {
+.operationsection .restaurantoperation {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin: 2rem;
 }
-.operation a {
+.operationsection button {
+  display: flex;
+  align-items: center;
   border-radius: 2rem;
-  padding: 1.6rem;
+  border: transparent;
+  padding: 1.65rem;
   background: #f6f6f6;
   text-decoration: none;
   font-size: 1rem;
@@ -160,7 +171,7 @@ header button {
   color: black;
   box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
 }
-.operation .rond {
+.operationsection .rond {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,19 +183,103 @@ header button {
   margin-left: -2.5rem;
   color: white;
 }
-.operation .rond p {
+.operationsection .rond p {
   font-size: 0.8rem;
 }
-.operation i {
+.operationsection i {
   font-size: 1.2rem;
   opacity: 60%;
 }
-.operation .operationlist {
+.operationsection .operationlist {
   display: flex;
   align-items: center;
 }
-.operation .operationlist p {
+.operationsection .operationlist p {
   padding-left: 1.5rem;
+}
+
+.restaurantsection {
+  background: #f6f6f6;
+  padding-top: 3.2rem;
+  padding-bottom: 3rem;
+}
+.restaurantsection h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0rem 0 1rem 1.2rem;
+}
+.restaurantsection .restaurantcard {
+  display: grid;
+  grid-template-columns: auto;
+  border-radius: 1rem;
+  margin: 1.2rem 1.3rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
+}
+.restaurantsection .restaurantcard img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem 1rem 0 0;
+  height: 11rem;
+  width: 100%;
+}
+.restaurantsection .restaurantcard a {
+  text-decoration: none;
+  color: black;
+}
+.restaurantsection .newsign {
+  position: absolute;
+  z-index: 2;
+  bottom: 13.4rem;
+  left: 15rem;
+  background: #9ae1cf;
+  border-radius: 0.2rem;
+}
+.restaurantsection .newsign p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.3rem 0.6rem;
+  color: #00a078;
+}
+.restaurantsection h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0 0.2rem 0.8rem;
+}
+.restaurantsection p {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0.8rem;
+}
+
+footer {
+  background: #353535;
+}
+footer h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.1rem;
+  padding: 1.2rem 0 1rem 0;
+}
+footer a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem 0;
+}
+footer .footicon {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footicon i {
+  font-size: 0.8rem;
+  width: 1.2rem;
+  margin-right: 0.4rem;
+}
+footer .footercontainer {
+  padding: 0 0 0.6rem 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
