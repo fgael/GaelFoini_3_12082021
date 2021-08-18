@@ -10,3 +10,31 @@ header {
     }
   }
 }
+
+main {
+  .menu {
+    background: #f6f6f6;
+    position: relative;
+    bottom: 2rem;
+    border-radius: 2rem 2rem 0rem 0rem;
+    .menutitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 2rem 0;
+      h1 {
+        font-family: "Shrikhand", cursive;
+        font-size: 1.6rem;
+        padding-left: 1rem;
+      }
+      i {
+        font-size: 1.5rem;
+        padding-right: 2rem;
+      }
+    }
+    .entrees {
+      p {
+      }
+    }
+  }
+}

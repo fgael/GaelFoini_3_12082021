@@ -137,29 +137,28 @@ header .restaurantexplore a {
   text-decoration: none;
   border-radius: 2rem;
   padding: 1rem 1.2rem 1rem 1.2rem;
-  background: #020024;
   background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #ff79da 100%);
   border: 1px transparent;
   color: white;
   font-size: 1rem;
 }
 
-.operationsection {
+main .operationsection {
   margin-bottom: 4.3rem;
   margin-top: 3rem;
 }
-.operationsection h2 {
+main .operationsection h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 1rem 1.2rem;
 }
-.operationsection .restaurantoperation {
+main .operationsection .restaurantoperation {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin: 2rem;
 }
-.operationsection button {
+main .operationsection button {
   display: flex;
   align-items: center;
   border-radius: 2rem;
@@ -172,7 +171,7 @@ header .restaurantexplore a {
   color: black;
   box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
 }
-.operationsection button .rond {
+main .operationsection button .rond {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,32 +183,31 @@ header .restaurantexplore a {
   margin-left: -2.5rem;
   color: white;
 }
-.operationsection button .rond p {
+main .operationsection button .rond p {
   font-size: 0.8rem;
 }
-.operationsection button .operationlist {
+main .operationsection button .operationlist {
   display: flex;
   align-items: center;
 }
-.operationsection button .operationlist p {
+main .operationsection button .operationlist p {
   padding-left: 1.5rem;
 }
-.operationsection button .operationlist i {
+main .operationsection button .operationlist i {
   font-size: 1.2rem;
   opacity: 60%;
 }
-
-.restaurantsection {
+main .restaurantsection {
   background: #f6f6f6;
   padding-top: 3.2rem;
   padding-bottom: 3rem;
 }
-.restaurantsection h2 {
+main .restaurantsection h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0rem 0 1rem 1.2rem;
 }
-.restaurantsection .restaurantcard {
+main .restaurantsection .restaurantcard {
   display: grid;
   position: relative;
   grid-template-columns: auto;
@@ -218,49 +216,49 @@ header .restaurantexplore a {
   z-index: 1;
   box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
 }
-.restaurantsection .restaurantcard img {
+main .restaurantsection .restaurantcard img {
   object-fit: cover;
   object-position: center;
   border-radius: 1rem 1rem 0 0;
   height: 11rem;
   width: 100%;
 }
-.restaurantsection .restaurantcard a {
+main .restaurantsection .restaurantcard a {
   text-decoration: none;
   color: black;
 }
-.restaurantsection .newsign {
+main .restaurantsection .newsign {
   position: absolute;
   z-index: 2;
   top: 5%;
   right: 3%;
-  background: #9ae1cf;
+  background: #99e2d0;
   border-radius: 0.2rem;
   width: 5rem;
 }
-.restaurantsection .newsign p {
+main .restaurantsection .newsign p {
   font-size: 0.9rem;
   font-weight: bold;
   margin: 0.3rem 0.6rem;
   color: #00a078;
 }
-.restaurantsection .gridpresentation {
+main .restaurantsection .gridpresentation {
   display: grid;
   grid-template-columns: 80% auto;
   grid-template-rows: repeat(2, 1fr);
 }
-.restaurantsection .gridpresentation h3 {
+main .restaurantsection .gridpresentation h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 1rem 0 0.2rem 0.8rem;
   grid-area: 1/1/2/2;
 }
-.restaurantsection .gridpresentation p {
+main .restaurantsection .gridpresentation p {
   font-size: 1.1rem;
   margin: 0 0 1rem 0.8rem;
   grid-area: 2/1/3/2;
 }
-.restaurantsection .gridpresentation i {
+main .restaurantsection .gridpresentation i {
   display: grid;
   grid-area: 1/2/3/3;
   justify-content: center;
@@ -314,44 +312,58 @@ header .logo i {
   font-size: 1.1rem;
 }
 
+main .menu {
+  background: #f6f6f6;
+  position: relative;
+  bottom: 2rem;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+main .menu .menutitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 0;
+}
+main .menu .menutitle h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+}
+main .menu .menutitle i {
+  font-size: 1.5rem;
+  padding-right: 2rem;
+}
 @media (min-width: 768px) {
-  .operationsection h2 {
+  main .operationsection h2 {
     text-align: center;
+    margin-bottom: 3rem;
   }
-  .operationsection .restaurantoperation {
+  main .operationsection .restaurantoperation {
     flex-direction: row;
     gap: 3rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0 5%;
   }
-
-  .restaurantsection h2 {
-    margin-left: 7.2rem;
+  main .restaurantsection h2 {
+    margin: 1rem 7.2%;
   }
-  .restaurantsection .restaurantgrid {
+  main .restaurantsection .restaurantgrid {
     display: grid;
     grid-template-columns: auto auto;
-    margin: 0 3rem;
+    margin: 0 5%;
+  }
+  main .restaurantsection .restaurantcard img {
+    height: 15rem;
+  }
+
+  footer .footercontainer {
+    margin: 0 5%;
   }
 }
-@media (min-width: 1024px) {
-  .operationsection h2 {
-    text-align: center;
-  }
-  .operationsection .restaurantoperation {
-    flex-direction: row;
-    gap: 3rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .restaurantsection h2 {
-    margin-left: 7.2rem;
-  }
-  .restaurantsection .restaurantgrid {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 0 6rem;
+@media (min-width: 1025px) {
+  main .restaurantsection h2 {
+    margin: 1rem 6.2%;
   }
 
   footer h3 {
@@ -363,14 +375,6 @@ header .logo i {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 1rem;
-  }
-}
-@media (min-width: 1366px) {
-  .restaurantsection h2 {
-    margin-left: 16.2rem;
-  }
-  .restaurantsection .restaurantgrid {
-    margin: 0 15rem;
   }
 }
 
