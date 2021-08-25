@@ -76,6 +76,184 @@ th {
   padding: 0;
 }
 
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo i {
+  position: relative;
+  margin-left: 150%;
+  font-size: 1.1rem;
+}
+
+main .banniere {
+  max-height: 25rem;
+  object-fit: cover;
+}
+main .banniere img {
+  position: relative;
+  width: 100%;
+}
+main .menucontainer {
+  background: #f6f6f6;
+  position: relative;
+  margin-top: -2rem;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+main .menucontainer .menucontainerwithoutbg {
+  margin: 0 1rem;
+}
+main .menucontainer .menucontainerwithoutbg .menutitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 0;
+}
+main .menucontainer .menucontainerwithoutbg .menutitle h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+  padding-left: 0.2rem;
+}
+main .menucontainer .menucontainerwithoutbg .menutitle i {
+  font-size: 1.5rem;
+  padding-right: 1.5rem;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 0 0.2rem 0.2rem;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .greenunderline {
+  background: #99e2d0;
+  height: 0.2rem;
+  width: 3rem;
+  margin: 0 0 1rem 0.2rem;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2.7rem;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat p {
+  text-transform: inherit;
+  margin: 0;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule {
+  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "intitule1 intitule3" "intitule2 intitule3";
+  gap: 0.4rem;
+  background: white;
+  padding: 0.7rem 0 0.6rem 0.6rem;
+  border-radius: 1rem;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule .intitule1 {
+  grid-area: intitule1;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule .intitule1 h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule .intitule2 {
+  grid-area: intitule2;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule .intitule2 p {
+  font-size: 1rem;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule .intitule3 {
+  grid-area: intitule3;
+  padding: 1.7rem 1.4rem 0 0;
+  text-align: right;
+  font-weight: bold;
+}
+main .menucontainer .menucontainerwithoutbg .gridmenu .gridplat .gridintitule .intitule3 p {
+  font-size: 0.9rem;
+}
+main .orderbtn {
+  text-align: center;
+  padding: 1rem 0 6.4rem 0;
+}
+main .orderbtn a {
+  background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #ff79da 100%);
+  text-decoration: none;
+  border-radius: 2rem;
+  padding: 1rem 3.5rem;
+  border: 1px transparent;
+  color: white;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+}
+main .orderbtn a:hover {
+  background: linear-gradient(0deg, #020024 0%, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
+  transition-duration: 0.2s;
+}
+
+@media (min-width: 768px) {
+  main .menucontainer {
+    margin: 0 5rem;
+    margin-top: 5rem;
+  }
+}
+@media (min-width: 1025px) {
+  main .menucontainer {
+    margin: 0 15rem;
+    margin-top: 15rem;
+  }
+  main .banniere img {
+    max-height: 70rem;
+  }
+}
+@media (min-width: 1400px) {
+  main .menucontainer {
+    margin: 0 20rem;
+  }
+  main .banniere img {
+    object-fit: cover;
+    object-position: center;
+    max-height: 30rem;
+  }
+}
+footer {
+  background: #353535;
+}
+footer .footercontainer {
+  padding: 0 0 0.6rem 1rem;
+}
+footer .footercontainer h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
+  padding: 1.2rem 0 0.9rem 0;
+}
+footer .footelementcontainer a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem 0;
+  font-size: 1rem;
+}
+footer .footelementcontainer .footicon {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footelementcontainer .footicon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -89,8 +267,8 @@ header {
   flex-direction: column;
 }
 header .logo {
-  position: relative;
   box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
+  position: relative;
 }
 header .logo img {
   display: flex;
@@ -107,14 +285,15 @@ header .placefinder {
 header .placefinder input {
   width: 9rem;
   text-align: right;
-  border: 0px transparent;
+  border: 1px transparent;
+  outline: none;
   padding: 0.9rem 0rem;
   background: #eaeaea;
   font-size: 1rem;
   font-weight: bold;
 }
-header .placefinder ::placeholder {
-  color: #656565;
+header .placefinder input::placeholder {
+  color: #353535;
 }
 header .explorebg {
   background: #f6f6f6;
@@ -134,13 +313,18 @@ header .restaurantexplore p {
   margin-bottom: 2.8rem;
 }
 header .restaurantexplore a {
+  background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #ff79da 100%);
   text-decoration: none;
   border-radius: 2rem;
   padding: 1rem 1.2rem 1rem 1.2rem;
-  background: linear-gradient(0deg, #020024 0%, #9356dc 0%, #ff79da 100%);
   border: 1px transparent;
   color: white;
   font-size: 1rem;
+  transition-duration: 0.2s;
+}
+header .restaurantexplore a:hover {
+  background: linear-gradient(0deg, #020024 0%, rgba(147, 86, 220, 0.8) 0%, rgba(255, 121, 218, 0.8) 100%);
+  transition-duration: 0.2s;
 }
 
 main .operationsection {
@@ -159,6 +343,7 @@ main .operationsection .restaurantoperation {
   margin: 2rem;
 }
 main .operationsection button {
+  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   border-radius: 2rem;
@@ -169,7 +354,6 @@ main .operationsection button {
   font-size: 1rem;
   font-weight: bold;
   color: black;
-  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
 }
 main .operationsection button .rond {
   display: flex;
@@ -208,13 +392,13 @@ main .restaurantsection h2 {
   margin: 0rem 0 1rem 1.2rem;
 }
 main .restaurantsection .restaurantcard {
+  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
   display: grid;
   position: relative;
   grid-template-columns: auto;
   border-radius: 1rem;
   margin: 1.2rem 1.3rem;
   z-index: 1;
-  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35), 0 2px 10px -6px rgba(0, 0, 0, 0.7);
 }
 main .restaurantsection .restaurantcard img {
   object-fit: cover;
@@ -267,72 +451,6 @@ main .restaurantsection .gridpresentation i {
   opacity: 80%;
 }
 
-footer {
-  background: #353535;
-}
-footer .footercontainer {
-  padding: 0 0 0.6rem 1rem;
-}
-footer .footercontainer h3 {
-  color: white;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.2rem;
-  padding: 1.2rem 0 0.9rem 0;
-}
-footer .footelementcontainer a {
-  display: flex;
-  text-decoration: none;
-  color: white;
-  padding: 0.2rem 0;
-  font-size: 1rem;
-}
-footer .footelementcontainer .footicon {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-footer .footelementcontainer .footicon i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  width: 1rem;
-  margin-right: 0.5rem;
-}
-
-header .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .logo i {
-  position: relative;
-  margin-left: 150%;
-  font-size: 1.1rem;
-}
-
-main .menu {
-  background: #f6f6f6;
-  position: relative;
-  bottom: 2rem;
-  border-radius: 2rem 2rem 0rem 0rem;
-}
-main .menu .menutitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 2rem 0;
-}
-main .menu .menutitle h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.6rem;
-  padding-left: 1rem;
-}
-main .menu .menutitle i {
-  font-size: 1.5rem;
-  padding-right: 2rem;
-}
 @media (min-width: 768px) {
   main .operationsection h2 {
     text-align: center;

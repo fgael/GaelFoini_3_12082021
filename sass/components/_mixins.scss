@@ -1,0 +1,22 @@
+@mixin shadow {
+  box-shadow: 0 0.3px 1.3px -6px rgba(0, 0, 0, 0.35),
+    0 2px 10px -6px rgba(0, 0, 0, 0.7);
+}
+
+@mixin btngradient {
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+}
+
+@mixin btngradient80 {
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(147, 86, 220, 0.8) 0%,
+    rgba(255, 121, 218, 0.8) 100%
+  );
+}
