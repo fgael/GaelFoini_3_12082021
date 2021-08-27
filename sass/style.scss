@@ -1,6 +1,6 @@
-@use "components" as *;
-@use "packages/_menu";
-@use "packages/_footer";
+@use "utils" as *;
+@use "layout/_menu";
+@use "layout/_footer";
 
 html {
   scroll-behavior: smooth;
@@ -65,16 +65,8 @@ header {
     }
     a {
       @include btngradient;
-      text-decoration: none;
-      border-radius: 2rem;
-      padding: 1rem 1.2rem 1rem 1.2rem;
-      border: 1px transparent;
-      color: white;
-      font-size: 1rem;
-      transition-duration: 0.2s;
       &:hover {
         @include btngradient80;
-        transition-duration: 0.2s;
       }
     }
   }
@@ -97,7 +89,7 @@ main {
       margin: 2rem;
     }
 
-    button {
+    a {
       @include shadow;
       display: flex;
       align-items: center;
