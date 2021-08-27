@@ -206,7 +206,7 @@ main .orderbtn a:hover {
 
   main .menucontainer {
     margin: 0 5rem;
-    margin-top: -2rem;
+    margin-top: -4rem;
   }
   main .banniere img {
     max-height: 50vh;
@@ -215,7 +215,8 @@ main .orderbtn a:hover {
 }
 @media (min-width: 1025px) {
   main .menucontainer {
-    margin: 0 10rem;
+    margin: 0 7.5rem;
+    margin-top: -4rem;
   }
   main .menucontainer .menucontainerwithoutbg .gridmenu {
     display: grid;
@@ -502,7 +503,10 @@ main .restaurantsection .gridpresentation i {
 }
 @media (min-width: 1025px) {
   main .restaurantsection h2 {
-    margin: 1rem 6.2%;
+    margin: 1rem 12%;
+  }
+  main .restaurantsection .restaurantgrid {
+    margin: 0 10%;
   }
 
   footer h3 {
@@ -514,6 +518,14 @@ main .restaurantsection .gridpresentation i {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  main .restaurantsection h2 {
+    margin: 1rem 16.5%;
+  }
+  main .restaurantsection .restaurantgrid {
+    margin: 0 15%;
   }
 }
 

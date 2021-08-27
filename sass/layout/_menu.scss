@@ -135,7 +135,7 @@ main {
   main {
     .menucontainer {
       margin: 0 5rem;
-      margin-top: -2rem;
+      margin-top: -4rem;
     }
     .banniere {
       img {
@@ -149,7 +149,8 @@ main {
 @media (min-width: 1025px) {
   main {
     .menucontainer {
-      margin: 0 10rem;
+      margin: 0 7.5rem;
+      margin-top: -4rem;
       .menucontainerwithoutbg {
         .gridmenu {
           display: grid;

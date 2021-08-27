@@ -244,7 +244,10 @@ main {
   main {
     .restaurantsection {
       h2 {
-        margin: 1rem 6.2%;
+        margin: 1rem 12%;
+      }
+      .restaurantgrid {
+        margin: 0 10%;
       }
     }
   }
@@ -259,6 +262,19 @@ main {
       justify-content: center;
       gap: 2rem;
       margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  main {
+    .restaurantsection {
+      h2 {
+        margin: 1rem 16.5%;
+      }
+      .restaurantgrid {
+        margin: 0 15%;
+      }
     }
   }
 }
