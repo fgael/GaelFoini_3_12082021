@@ -21,6 +21,7 @@ header {
 main {
   .banniere {
     max-height: 25rem;
+    -o-object-fit: cover;
     object-fit: cover;
     img {
       position: relative;
@@ -140,6 +141,7 @@ main {
     .banniere {
       img {
         max-height: 50vh;
+        -o-object-fit: cover;
         object-fit: cover;
       }
     }
@@ -176,7 +178,9 @@ main {
     }
     .banniere {
       img {
+        -o-object-fit: cover;
         object-fit: cover;
+        -o-object-position: center;
         object-position: center;
         max-height: 30rem;
       }

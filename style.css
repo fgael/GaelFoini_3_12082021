@@ -94,6 +94,7 @@ header .logo a i {
 
 main .banniere {
   max-height: 25rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 main .banniere img {
@@ -211,6 +212,7 @@ main .orderbtn a:hover {
   }
   main .banniere img {
     max-height: 50vh;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 }
@@ -237,7 +239,9 @@ main .orderbtn a:hover {
     margin: 0 15rem;
   }
   main .banniere img {
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center;
     object-position: center;
     max-height: 30rem;
   }
@@ -301,14 +305,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
   background: #eaeaea;
 }
 .loadercontainer .loader .face {
   position: absolute;
-  border: 2px solid #eaeaea;
+  border: 3px solid #eaeaea;
 }
 .loadercontainer .loader .face1 {
   top: 0;
@@ -320,6 +323,7 @@ body {
   border-top: 3px solid #9356dc;
   border-left: 3px solid #9356dc;
   border-right: 3px solid #9356dc;
+  -webkit-animation: animate 2s linear infinite;
   animation: animate 2s linear infinite;
 }
 .loadercontainer .loader .face1 .circle {
@@ -354,6 +358,7 @@ body {
   border-radius: 50%;
   border-left: 3px solid #99e2d0;
   border-top: 3px solid #99e2d0;
+  -webkit-animation: animate 2s linear infinite;
   animation: animate 2s linear infinite;
 }
 .loadercontainer .loader .face3 .circle {
@@ -378,6 +383,14 @@ body {
   border-radius: 50%;
   top: -4px;
   right: -4px;
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @keyframes animate {
   0% {
@@ -417,6 +430,18 @@ header .placefinder input {
   background: #eaeaea;
   font-size: 1rem;
   font-weight: bold;
+}
+header .placefinder input::-webkit-input-placeholder {
+  color: #353535;
+}
+header .placefinder input::-moz-placeholder {
+  color: #353535;
+}
+header .placefinder input:-ms-input-placeholder {
+  color: #353535;
+}
+header .placefinder input::-ms-input-placeholder {
+  color: #353535;
 }
 header .placefinder input::placeholder {
   color: #353535;
@@ -535,7 +560,9 @@ main .restaurantsection .restaurantcard {
   z-index: 1;
 }
 main .restaurantsection .restaurantcard img {
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   border-radius: 1rem 1rem 0 0;
   height: 11rem;
