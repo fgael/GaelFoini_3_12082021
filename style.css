@@ -284,6 +284,110 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.loadercontainer {
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+  position: absolute;
+  z-index: 2;
+  transition-property: opacity, visibility;
+  transition-duration: 0.5s;
+  transition-delay: 2.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.loadercontainer .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  background: #eaeaea;
+}
+.loadercontainer .loader .face {
+  position: absolute;
+  border: 2px solid #eaeaea;
+}
+.loadercontainer .loader .face1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #eaeaea;
+  border-radius: 50%;
+  border-top: 3px solid #9356dc;
+  border-left: 3px solid #9356dc;
+  border-right: 3px solid #9356dc;
+  animation: animate 2s linear infinite;
+}
+.loadercontainer .loader .face1 .circle {
+  transform: rotate(-310deg);
+}
+.loadercontainer .loader .face1 .circle:before {
+  background: #9356dc;
+}
+.loadercontainer .loader .face2 {
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  background: #eaeaea;
+  border-radius: 50%;
+  border-right: 3px solid #ff79da;
+  border-bottom: 3px solid #ff79da;
+  animation: animate 2s linear reverse infinite;
+}
+.loadercontainer .loader .face2 .circle {
+  transform: rotate(-50deg);
+}
+.loadercontainer .loader .face2 .circle:before {
+  background: #ff79da;
+}
+.loadercontainer .loader .face3 {
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  bottom: 60px;
+  background: #eaeaea;
+  border-radius: 50%;
+  border-left: 3px solid #99e2d0;
+  border-top: 3px solid #99e2d0;
+  animation: animate 2s linear infinite;
+}
+.loadercontainer .loader .face3 .circle {
+  transform: rotate(-45deg);
+}
+.loadercontainer .loader .face3 .circle:before {
+  background: #99e2d0;
+}
+.loadercontainer .loader .circle {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  transform-origin: left;
+}
+.loadercontainer .loader .circle:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: -4px;
+  right: -4px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
