@@ -113,11 +113,6 @@ main {
     a {
       @include btngradient;
       padding: 1rem 3.5rem;
-      transition-duration: 0.2s;
-      &:hover {
-        @include btngradient80;
-        transition-duration: 0.2s;
-      }
     }
   }
 }

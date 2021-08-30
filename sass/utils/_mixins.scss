@@ -11,23 +11,13 @@
 }
 
 @mixin btngradient {
+  z-index: 1;
   color: white;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#ff79da),
-    to(#9356dc)
-  );
-  text-decoration: none;
-  border-radius: 2rem;
   padding: 1rem 1.2rem 1rem 1.2rem;
-  border: 1px transparent;
-  font-size: 1rem;
-  transition-duration: 1s;
-}
-
-@mixin btngradient80 {
+  text-decoration: none;
+  outline: none;
+  border-radius: 2rem;
+  border: none;
   background: -webkit-gradient(
     linear,
     left top,
@@ -35,8 +25,28 @@
     from(#ff79da),
     to(#9356dc)
   );
-  opacity: 80%;
-  transition-duration: 0.5s;
-  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35),
-    0 2px 20px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35),
+    0 2px 10px -5px rgba(0, 0, 0, 0.7);
+
+  &:hover {
+    animation: jelly 0.5s;
+    box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35),
+      0 2px 20px -3px rgba(0, 0, 0, 0.7);
+
+    @keyframes jelly {
+      0%,
+      100% {
+        transform: scale(1, 1);
+      }
+      25% {
+        transform: scale(0.9, 1.1);
+      }
+      50% {
+        transform: scale(1.1, 0.9);
+      }
+      75% {
+        transform: scale(0.95, 1.05);
+      }
+    }
+  }
 }

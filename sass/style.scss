@@ -13,6 +13,7 @@ body {
 .loadercontainer {
   width: 100%;
   height: 100%;
+  position: fixed;
   background-color: $bgmidgrey;
   position: absolute;
   z-index: 2;
@@ -22,6 +23,8 @@ body {
   opacity: 0;
   visibility: hidden;
   .loader {
+    opacity: 1;
+    visibility: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -192,9 +195,6 @@ header {
     }
     a {
       @include btngradient;
-      &:hover {
-        @include btngradient80;
-      }
     }
   }
 }
@@ -296,7 +296,7 @@ main {
     }
     .newsign {
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       top: 5%;
       right: 3%;
       background: $bggreen;
