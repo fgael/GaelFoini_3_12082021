@@ -101,7 +101,12 @@ main {
       font-size: 1rem;
       font-weight: bold;
       color: black;
-
+      transition-duration: 0.3s;
+      &:hover {
+        @include shadowdarker;
+        opacity: 80%;
+        transition-duration: 0.5s;
+      }
       .rond {
         display: flex;
         justify-content: center;
@@ -221,7 +226,7 @@ main {
       h2 {
         margin: 1rem 7.2%;
       }
-      .restaurantgrid {
+      .restaurantcontainer {
         display: grid;
         grid-template-columns: auto auto;
         margin: 0 5%;
@@ -246,7 +251,7 @@ main {
       h2 {
         margin: 1rem 12%;
       }
-      .restaurantgrid {
+      .restaurantcontainer {
         margin: 0 10%;
       }
     }
@@ -272,7 +277,7 @@ main {
       h2 {
         margin: 1rem 16.5%;
       }
-      .restaurantgrid {
+      .restaurantcontainer {
         margin: 0 15%;
       }
     }
