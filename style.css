@@ -285,8 +285,19 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  animation: bodyhidden 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
 }
 
+@keyframes bodyhidden {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
 .loadercontainer {
   width: 100%;
   height: 100vh;
@@ -367,7 +378,7 @@ body {
 }
 .loadercontainer .loader .circle {
   position: absolute;
-  top: calc(50% - 2px);
+  top: 50%;
   left: 50%;
   width: 50%;
   height: 2px;
