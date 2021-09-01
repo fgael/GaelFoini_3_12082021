@@ -54,6 +54,8 @@
   }
 
   input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
   }
 
@@ -64,7 +66,9 @@
       rgba(255, 121, 218, 1) 0%,
       rgba(147, 86, 220, 1) 100%
     );
+    background-clip: text;
     -webkit-background-clip: text;
+    text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
     animation: heartanim 1.5s;
   }
