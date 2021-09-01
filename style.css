@@ -121,9 +121,62 @@ main .menucontainer .menucontainerwithoutbg .menutitle h1 {
   font-size: 1.7rem;
   padding-left: 0.2rem;
 }
-main .menucontainer .menucontainerwithoutbg .menutitle i {
+main .menucontainer .menucontainerwithoutbg .menutitle label {
   font-size: 1.5rem;
   padding-right: 1.5rem;
+}
+main .menucontainer .menucontainerwithoutbg .menutitle label .fas {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.7rem;
+  font-weight: 100;
+  color: black;
+  animation: heartanimblack 0.5s;
+}
+main .menucontainer .menucontainerwithoutbg .menutitle label input[type=checkbox] {
+  appearance: none;
+}
+main .menucontainer .menucontainerwithoutbg .menutitle label input[type=checkbox]:checked ~ i {
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heartanim 1.5s;
+}
+@keyframes heartanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heartanimblack {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main .menucontainer .menucontainerwithoutbg .listmenu .entrees {
+  animation: fadelist ease-in 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+main .menucontainer .menucontainerwithoutbg .listmenu .plat {
+  animation: fadelist ease-in 1s;
+  opacity: 0;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+main .menucontainer .menucontainerwithoutbg .listmenu .desserts {
+  animation: fadelist ease-in 1s;
+  opacity: 0;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 main .menucontainer .menucontainerwithoutbg .listmenu p {
   font-size: 1rem;
@@ -177,7 +230,20 @@ main .menucontainer .menucontainerwithoutbg .listmenu .listplat .listintitule .p
 main .menucontainer .menucontainerwithoutbg .listmenu .listplat .listintitule .prix p {
   font-size: 0.9rem;
 }
+@keyframes fadelist {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 main .orderbtn {
+  animation: fadelist ease-in 1s;
+  opacity: 0;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
   text-align: center;
   padding: 1rem 0 6.4rem 0;
 }
@@ -190,12 +256,13 @@ main .orderbtn a {
   border-radius: 2rem;
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  transition: 0.3s;
+  transition-duration: 0.4s;
   box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
   padding: 1rem 3.5rem;
 }
 main .orderbtn a:hover {
-  transition: 0.2s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#c974d5));
+  transition-duration: 0.5s;
   opacity: 0.9;
   box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 20px -3px rgba(0, 0, 0, 0.7);
 }
@@ -222,9 +289,9 @@ main .orderbtn a:hover {
   }
   main .menucontainer .menucontainerwithoutbg .listmenu {
     display: grid;
-    grid-template-rows: 1fr 1fr auto;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    padding-bottom: 4rem;
   }
   main .menucontainer .menucontainerwithoutbg .listmenu .orderbtn {
     display: flex;
@@ -285,31 +352,18 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  animation: bodyhidden 0.5s;
-  animation-delay: 2.5s;
-  animation-fill-mode: both;
 }
-
-@keyframes bodyhidden {
-  0% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: visible;
-  }
-}
-.loadercontainer {
+body .loadercontainer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   background-color: #eaeaea;
-  position: absolute;
   z-index: 2;
   animation: loaderload 0.5s;
   animation-delay: 2.5s;
   animation-fill-mode: both;
 }
-.loadercontainer .loader {
+body .loadercontainer .loader {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -318,11 +372,11 @@ body {
   height: 150px;
   background: #eaeaea;
 }
-.loadercontainer .loader .face {
+body .loadercontainer .loader .face {
   position: absolute;
   border: 3px solid #eaeaea;
 }
-.loadercontainer .loader .face1 {
+body .loadercontainer .loader .face1 {
   top: 0;
   left: 0;
   right: 0;
@@ -332,16 +386,15 @@ body {
   border-top: 3px solid #9356dc;
   border-left: 3px solid #9356dc;
   border-right: 3px solid #9356dc;
-  -webkit-animation: animate 2s linear infinite;
   animation: animate 2s linear infinite;
 }
-.loadercontainer .loader .face1 .circle {
+body .loadercontainer .loader .face1 .circle {
   transform: rotate(-315deg);
 }
-.loadercontainer .loader .face1 .circle:before {
+body .loadercontainer .loader .face1 .circle:before {
   background: #9356dc;
 }
-.loadercontainer .loader .face2 {
+body .loadercontainer .loader .face2 {
   top: 30px;
   left: 30px;
   right: 30px;
@@ -352,13 +405,13 @@ body {
   border-bottom: 3px solid #ff79da;
   animation: animate 2s linear reverse infinite;
 }
-.loadercontainer .loader .face2 .circle {
+body .loadercontainer .loader .face2 .circle {
   transform: rotate(-50deg);
 }
-.loadercontainer .loader .face2 .circle:before {
+body .loadercontainer .loader .face2 .circle:before {
   background: #ff79da;
 }
-.loadercontainer .loader .face3 {
+body .loadercontainer .loader .face3 {
   top: 60px;
   left: 60px;
   right: 60px;
@@ -367,16 +420,15 @@ body {
   border-radius: 50%;
   border-left: 3px solid #99e2d0;
   border-top: 3px solid #99e2d0;
-  -webkit-animation: animate 2s linear infinite;
   animation: animate 2s linear infinite;
 }
-.loadercontainer .loader .face3 .circle {
+body .loadercontainer .loader .face3 .circle {
   transform: rotate(-45deg);
 }
-.loadercontainer .loader .face3 .circle:before {
+body .loadercontainer .loader .face3 .circle:before {
   background: #99e2d0;
 }
-.loadercontainer .loader .circle {
+body .loadercontainer .loader .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -384,7 +436,7 @@ body {
   height: 2px;
   transform-origin: left;
 }
-.loadercontainer .loader .circle:before {
+body .loadercontainer .loader .circle:before {
   content: "";
   position: absolute;
   width: 10px;
@@ -393,7 +445,6 @@ body {
   top: -4px;
   right: -4px;
 }
-
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -410,6 +461,23 @@ body {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+#bodyindex {
+  animation: bodyhidden 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes bodyhidden {
+  0% {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  100% {
+    visibility: visible;
+    overflow-y: visible;
   }
 }
 header {
@@ -442,18 +510,6 @@ header .placefinder input {
   font-size: 1rem;
   font-weight: bold;
 }
-header .placefinder input::-webkit-input-placeholder {
-  color: #353535;
-}
-header .placefinder input::-moz-placeholder {
-  color: #353535;
-}
-header .placefinder input:-ms-input-placeholder {
-  color: #353535;
-}
-header .placefinder input::-ms-input-placeholder {
-  color: #353535;
-}
 header .placefinder input::placeholder {
   color: #353535;
 }
@@ -483,11 +539,12 @@ header .restaurantexplore a {
   border-radius: 2rem;
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  transition: 0.3s;
+  transition-duration: 0.4s;
   box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
 }
 header .restaurantexplore a:hover {
-  transition: 0.2s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#c974d5));
+  transition-duration: 0.5s;
   opacity: 0.9;
   box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 20px -3px rgba(0, 0, 0, 0.7);
 }
@@ -523,7 +580,7 @@ main .operationsection a {
 }
 main .operationsection a:hover {
   box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 20px -3px rgba(0, 0, 0, 0.7);
-  opacity: 80%;
+  background: #f5edff;
   transition-duration: 0.5s;
 }
 main .operationsection a .rond {
@@ -570,6 +627,11 @@ main .restaurantsection .restaurantcard {
   border-radius: 1rem;
   margin: 1.2rem 1.3rem;
   z-index: 1;
+  transition-duration: 0.3s;
+}
+main .restaurantsection .restaurantcard:hover {
+  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 20px -3px rgba(0, 0, 0, 0.7);
+  transition-duration: 0.5s;
 }
 main .restaurantsection .restaurantcard img {
   -o-object-fit: cover;
@@ -603,25 +665,57 @@ main .restaurantsection .gridpresentation {
   display: grid;
   grid-template-columns: 80% auto;
   grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "h3 label" "p label";
 }
-main .restaurantsection .gridpresentation h3 {
+main .restaurantsection h3 {
   font-size: 1.1rem;
   font-weight: bold;
   margin: 1rem 0 0.2rem 0.8rem;
-  grid-area: 1/1/2/2;
+  grid-area: h3;
 }
-main .restaurantsection .gridpresentation p {
+main .restaurantsection p {
   font-size: 1.1rem;
   margin: 0 0 1rem 0.8rem;
-  grid-area: 2/1/3/2;
+  grid-area: p;
 }
-main .restaurantsection .gridpresentation i {
-  display: grid;
-  grid-area: 1/2/3/3;
+main .restaurantsection label {
+  display: flex;
+  grid-area: label;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  opacity: 80%;
+}
+main .restaurantsection label .fas {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.7rem;
+  font-weight: 100;
+  color: black;
+  animation: heartanimblack 0.5s;
+}
+main .restaurantsection label input[type=checkbox] {
+  appearance: none;
+}
+main .restaurantsection label input[type=checkbox]:checked ~ i {
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heartanim 1.5s;
+}
+@keyframes heartanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heartanimblack {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
