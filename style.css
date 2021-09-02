@@ -132,13 +132,15 @@ main .menucontainer .menucontainerwithoutbg .menutitle label .fas {
   color: black;
   animation: heartanimblack 0.5s;
 }
-main .menucontainer .menucontainerwithoutbg .menutitle label input[type=checkbox] {
-  appearance: none;
+main .menucontainer .menucontainerwithoutbg .menutitle label input {
+  visibility: hidden;
 }
 main .menucontainer .menucontainerwithoutbg .menutitle label input[type=checkbox]:checked ~ i {
   font-weight: 900;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   animation: heartanim 1.5s;
 }
@@ -568,7 +570,7 @@ main .operationsection a {
   box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   border: transparent;
   padding: 1.65rem;
   background: #f6f6f6;
@@ -691,13 +693,15 @@ main .restaurantsection label .fas {
   color: black;
   animation: heartanimblack 0.5s;
 }
-main .restaurantsection label input[type=checkbox] {
-  appearance: none;
+main .restaurantsection label input {
+  visibility: hidden;
 }
 main .restaurantsection label input[type=checkbox]:checked ~ i {
   font-weight: 900;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
   -webkit-background-clip: text;
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   animation: heartanim 1.5s;
 }

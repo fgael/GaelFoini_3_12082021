@@ -53,10 +53,8 @@
     animation: heartanimblack 0.5s;
   }
 
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  input {
+    visibility: hidden;
   }
 
   input[type="checkbox"]:checked ~ i {
