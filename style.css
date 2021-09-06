@@ -140,6 +140,9 @@ main .menucontainer .menucontainerwithoutbg .menutitle label input[type=checkbox
   -webkit-text-fill-color: transparent;
   animation: heartanim 1.5s;
 }
+main .menucontainer .menucontainerwithoutbg .menutitle label:hover {
+  cursor: pointer;
+}
 @keyframes heartanim {
   0% {
     opacity: 0;
@@ -739,6 +742,9 @@ main .restaurantsection label input[type=checkbox]:checked ~ i {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: heartanim 1.5s;
+}
+main .restaurantsection label:hover {
+  cursor: pointer;
 }
 @keyframes heartanim {
   0% {

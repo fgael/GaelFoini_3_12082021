@@ -68,6 +68,9 @@
     -webkit-text-fill-color: transparent;
     animation: heartanim 1.5s;
   }
+  &:hover {
+    cursor: pointer;
+  }
 
   @keyframes heartanim {
     0% {
