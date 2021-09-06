@@ -3,9 +3,10 @@
 Projet dynamisez une page web avec des animations CSS
 
 <p align="center">
-  <a href="https://fgael.github.io/GaelFoini_3_12082021/">
+    <br>
+    <a href="https://fgael.github.io/GaelFoini_3_12082021/">
     <img src="img/logo/ohmyfood.svg" alt="Logo">
-  </a>
+    </a>
 
   <p align="center">
     Par Gaël Foini
@@ -16,7 +17,7 @@ Projet dynamisez une page web avec des animations CSS
 
 ## À propos
 
-Le site Reservia est un projet d'intégration de maquette, avec animation CSS, produit par Gaël Foini pour la formation de développeur web chez OpenClassrooms.
+Le site Ohmyfood est un projet d'intégration de maquette, avec animation CSS, produit par Gaël Foini pour la formation de développeur web chez OpenClassrooms.
 
 ### Développer avec
 
