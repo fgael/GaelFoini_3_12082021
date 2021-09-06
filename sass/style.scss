@@ -147,11 +147,10 @@ header {
   .logo {
     @include shadow;
     position: relative;
-    img {
-      display: flex;
-      height: 1.9rem;
-      margin: 1.2rem auto 0.8rem auto;
-    }
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    font-size: 1.9rem;
+    padding: 1rem 0 0.3rem 0;
   }
 
   .placefinder {
@@ -175,14 +174,14 @@ header {
     }
   }
 
-  .explorebg {
+  .discover {
     background: $bggrey;
   }
 
-  .restaurantexplore {
+  .restaurantdiscover {
     margin: 2.5rem 1rem 4.6rem 1rem;
     text-align: center;
-    h1 {
+    h2 {
       font-size: 1.5rem;
       font-weight: bold;
       margin: 0 2rem 0.7rem 2rem;
@@ -200,7 +199,7 @@ header {
 }
 
 main {
-  .operationsection {
+  .workingsection {
     margin-bottom: 4.3rem;
     margin-top: 3rem;
 
@@ -209,7 +208,7 @@ main {
       font-weight: bold;
       margin: 0 0 1rem 1.2rem;
     }
-    .restaurantoperation {
+    .workinglist {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
@@ -249,7 +248,7 @@ main {
           font-size: 0.8rem;
         }
       }
-      .operationlist {
+      .workingcontent {
         display: flex;
         align-items: center;
         p {
@@ -286,9 +285,7 @@ main {
         transition-duration: 0.5s;
       }
       img {
-        -o-object-fit: cover;
         object-fit: cover;
-        -o-object-position: center;
         object-position: center;
         border-radius: 1rem 1rem 0 0;
         height: 11rem;
@@ -314,7 +311,7 @@ main {
         color: $green;
       }
     }
-    .gridpresentation {
+    .gridcontent {
       display: grid;
       grid-template-columns: 80% auto;
       grid-template-rows: repeat(2, 1fr);
@@ -346,12 +343,12 @@ main {
 
 @media (min-width: 768px) {
   main {
-    .operationsection {
+    .workingsection {
       h2 {
         text-align: center;
         margin-bottom: 3rem;
       }
-      .restaurantoperation {
+      .workinglist {
         flex-direction: row;
         gap: 3rem;
         justify-content: center;
@@ -412,10 +409,10 @@ main {
   main {
     .restaurantsection {
       h2 {
-        margin: 1rem 16.5%;
+        margin: 1rem 21%;
       }
       .restaurantcontainer {
-        margin: 0 15%;
+        margin: 0 20%;
       }
     }
   }
