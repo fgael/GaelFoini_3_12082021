@@ -1,0 +1,89 @@
+@use "../utils/colors" as *;
+
+@mixin shadow {
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35),
+    0 2px 10px -5px rgba(0, 0, 0, 0.7);
+}
+
+@mixin shadowdarker {
+  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35),
+    0 2px 20px -3px rgba(0, 0, 0, 0.7);
+}
+
+@mixin btngradient {
+  z-index: 1;
+  color: white;
+  padding: 1rem 1.2rem 1rem 1.2rem;
+  text-decoration: none;
+  outline: none;
+  border-radius: 2rem;
+  border: none;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ff79da),
+    to(#9356dc)
+  );
+  transition-duration: 0.4s;
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35),
+    0 2px 10px -5px rgba(0, 0, 0, 0.7);
+
+  &:hover {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#ff79da),
+      to(#c974d5)
+    );
+    transition-duration: 0.5s;
+    opacity: 0.9;
+    box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35),
+      0 2px 20px -3px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@mixin heart {
+  .fas {
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.7rem;
+    font-weight: 100;
+    color: black;
+    animation: heartanimblack 0.5s;
+  }
+
+  input {
+    visibility: hidden;
+  }
+
+  input[type="checkbox"]:checked ~ i {
+    font-weight: 900;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 121, 218, 1) 0%,
+      rgba(147, 86, 220, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heartanim 1.5s;
+  }
+
+  @keyframes heartanim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes heartanimblack {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

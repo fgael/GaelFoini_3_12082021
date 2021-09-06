@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favico/fav.ico" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Oh My Food</title>
+  </head>
+  <body id="bodyindex">
+    <div class="loadercontainer">
+      <div class="loader">
+        <div class="face face1">
+          <div class="circle"></div>
+        </div>
+        <div class="face face2">
+          <div class="circle"></div>
+        </div>
+        <div class="face face3">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1 class="logo">ohmyfood</h1>
+      <div class="placefinder">
+        <i class="fas fa-map-marker-alt"></i>
+        <input
+          type="search"
+          name="placefinder"
+          id="place"
+          placeholder="Paris, Belleville"
+        />
+      </div>
+      <div class="discover">
+        <div class="restaurantdiscover">
+          <h2>Réservez le menu qui vous convient</h2>
+          <p>
+            Découvrez des restaurants d'exception, séléctionnés par nos soins.
+          </p>
+          <a href="#restaurantsection">Explorer nos restaurants</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="workingsection">
+        <h2>Fonctionnement</h2>
+        <div class="workinglist">
+          <a href="#">
+            <div class="rond">
+              <p>1</p>
+            </div>
+            <div class="workingcontent">
+              <i class="fas fa-mobile-alt"></i>
+              <p>Choisissez un restaurant</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="rond">
+              <p>2</p>
+            </div>
+            <div class="workingcontent">
+              <i class="fas fa-list"></i>
+              <p>Composez votre menu</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="rond">
+              <p>3</p>
+            </div>
+            <div class="workingcontent">
+              <i class="fas fa-store"></i>
+              <p>Dégustez au restaurant</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="restaurantsection" id="restaurantsection">
+        <h2>Restaurants</h2>
+        <div class="restaurantcontainer">
+          <div class="restaurantcard">
+            <a href="menu-lapalette.html">
+              <img
+                src="img/restaurants/jay-wennington.jpg"
+                alt="La palette du goût"
+              />
+            </a>
+            <div class="newsign">
+              <p>Nouveau</p>
+            </div>
+            <div class="gridcontent">
+              <a href="menu-lapalette.html">
+                <h3>La palette du goût</h3>
+              </a>
+              <a href="menu-lapalette.html">
+                <p>Ménilmontant</p>
+              </a>
+              <label>
+                <input type="checkbox" />
+                <i class="fas fa-heart"></i>
+              </label>
+            </div>
+          </div>
+          <div class="restaurantcard">
+            <a href="menu-lanote.html">
+              <img src="img/restaurants/stil.jpg" alt="La note enchantée" />
+            </a>
+            <div class="newsign">
+              <p>Nouveau</p>
+            </div>
+            <div class="gridcontent">
+              <a href="menu-lanote.html">
+                <h3>La note enchantée</h3>
+              </a>
+              <a href="menu-lanote.html">
+                <p>Charonne</p>
+              </a>
+              <label>
+                <input type="checkbox" />
+                <i class="fas fa-heart"></i>
+              </label>
+            </div>
+          </div>
+          <div class="restaurantcard">
+            <a href="menu-lafrancaise.html">
+              <img src="img/restaurants/toa-heftiba.jpg" alt="À la française" />
+            </a>
+            <div class="gridcontent">
+              <a href="menu-lafrancaise.html">
+                <h3>À la française</h3>
+              </a>
+              <a href="menu-lafrancaise.html">
+                <p>Cité Rouge</p>
+              </a>
+              <label>
+                <input type="checkbox" />
+                <i class="fas fa-heart"></i>
+              </label>
+            </div>
+          </div>
+          <div class="restaurantcard">
+            <a href="menu-ledelice.html">
+              <img
+                src="img/restaurants/louis-hansel.jpg"
+                alt="Le délice des sens"
+              />
+            </a>
+            <div class="gridcontent">
+              <a href="menu-ledelice.html">
+                <h3>Le délice des sens</h3>
+              </a>
+              <a href="menu-ledelice.html">
+                <p>Folie-Méricourt</p>
+              </a>
+              <label>
+                <input type="checkbox" />
+                <i class="fas fa-heart"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footercontainer">
+        <h3>ohmyfood</h3>
+        <div class="footelementcontainer">
+          <div class="footicon">
+            <i class="fas fa-utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+          </div>
+          <div class="footicon">
+            <i class="fas fa-hands-helping"></i>
+            <a href="#">Devenir partenaire</a>
+          </div>
+          <a href="#">Mentions légales</a>
+          <a href="mailto:contact@ohmyfood.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

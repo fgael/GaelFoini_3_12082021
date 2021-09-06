@@ -1,0 +1,419 @@
+@use "utils" as *;
+@use "layout/_menu";
+@use "layout/_footer";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  .loadercontainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: $bgmidgrey;
+    z-index: 2;
+    animation: loaderload 0.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      background: $bgmidgrey;
+      .face {
+        position: absolute;
+        border: 3px solid $bgmidgrey;
+      }
+      .face1 {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $bgmidgrey;
+        border-radius: 50%;
+        border-top: 3px solid $violet;
+        border-left: 3px solid $violet;
+        border-right: 3px solid $violet;
+        animation: animate 2s linear infinite;
+        .circle {
+          transform: rotate(-315deg);
+          &:before {
+            background: $violet;
+          }
+        }
+      }
+      .face2 {
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        background: $bgmidgrey;
+        border-radius: 50%;
+        border-right: 3px solid $pink;
+        border-bottom: 3px solid $pink;
+        animation: animate 2s linear reverse infinite;
+        .circle {
+          transform: rotate(-50deg);
+          &:before {
+            background: $pink;
+          }
+        }
+      }
+      .face3 {
+        top: 60px;
+        left: 60px;
+        right: 60px;
+        bottom: 60px;
+        background: $bgmidgrey;
+        border-radius: 50%;
+        border-left: 3px solid $bggreen;
+        border-top: 3px solid $bggreen;
+        animation: animate 2s linear infinite;
+        .circle {
+          transform: rotate(-45deg);
+          &:before {
+            background: $bggreen;
+          }
+        }
+      }
+      .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 2px;
+        transform-origin: left;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          top: -4px;
+          right: -4px;
+        }
+      }
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loaderload {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+#bodyindex {
+  animation: bodyhidden 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes bodyhidden {
+  0% {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  100% {
+    visibility: visible;
+    overflow-y: visible;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    @include shadow;
+    position: relative;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    font-size: 1.9rem;
+    padding: 1rem 0 0.3rem 0;
+  }
+
+  .placefinder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bgmidgrey;
+    padding-right: 1rem;
+    input {
+      width: 9rem;
+      text-align: right;
+      border: 1px transparent;
+      outline: none;
+      padding: 0.9rem 0rem;
+      background: $bgmidgrey;
+      font-size: 1rem;
+      font-weight: bold;
+      &::placeholder {
+        color: $bgdarkgrey;
+      }
+    }
+  }
+
+  .discover {
+    background: $bggrey;
+  }
+
+  .restaurantdiscover {
+    margin: 2.5rem 1rem 4.6rem 1rem;
+    text-align: center;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 2rem 0.7rem 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $grey;
+      margin-bottom: 2.8rem;
+    }
+    a {
+      @include btngradient;
+    }
+  }
+}
+
+main {
+  .workingsection {
+    margin-bottom: 4.3rem;
+    margin-top: 3rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 0 1rem 1.2rem;
+    }
+    .workinglist {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2rem;
+    }
+
+    a {
+      @include shadow;
+      display: flex;
+      align-items: center;
+      border-radius: 1.5rem;
+      border: transparent;
+      padding: 1.65rem;
+      background: $bggrey;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      color: black;
+      transition-duration: 0.3s;
+      &:hover {
+        @include shadowdarker;
+        background: #f5edff;
+        transition-duration: 0.5s;
+      }
+      .rond {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: $violet;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: -2.5rem;
+        color: white;
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      .workingcontent {
+        display: flex;
+        align-items: center;
+        p {
+          padding-left: 1.5rem;
+        }
+        i {
+          font-size: 1.2rem;
+          opacity: 60%;
+        }
+      }
+    }
+  }
+
+  .restaurantsection {
+    background: $bggrey;
+    padding-top: 3.2rem;
+    padding-bottom: 3rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0rem 0 1rem 1.2rem;
+    }
+    .restaurantcard {
+      @include shadow;
+      display: grid;
+      position: relative;
+      grid-template-columns: auto;
+      border-radius: 1rem;
+      margin: 1.2rem 1.3rem;
+      z-index: 1;
+      transition-duration: 0.3s;
+      &:hover {
+        @include shadowdarker;
+        transition-duration: 0.5s;
+      }
+      img {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 1rem 1rem 0 0;
+        height: 11rem;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .newsign {
+      position: absolute;
+      z-index: 1;
+      top: 5%;
+      right: 3%;
+      background: $bggreen;
+      border-radius: 0.2rem;
+      width: 5rem;
+      p {
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 0.3rem 0.6rem;
+        color: $green;
+      }
+    }
+    .gridcontent {
+      display: grid;
+      grid-template-columns: 80% auto;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "h3 label"
+        "p label";
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 1rem 0 0.2rem 0.8rem;
+      grid-area: h3;
+    }
+    p {
+      font-size: 1.1rem;
+      margin: 0 0 1rem 0.8rem;
+      grid-area: p;
+    }
+    label {
+      display: flex;
+      grid-area: label;
+      justify-content: center;
+      align-items: center;
+      @include heart;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    .workingsection {
+      h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .workinglist {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 5%;
+      }
+    }
+    .restaurantsection {
+      h2 {
+        margin: 1rem 7.2%;
+      }
+      .restaurantcontainer {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 0 5%;
+      }
+      .restaurantcard {
+        img {
+          height: 15rem;
+        }
+      }
+    }
+  }
+  footer {
+    .footercontainer {
+      margin: 0 5%;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    .restaurantsection {
+      h2 {
+        margin: 1rem 12%;
+      }
+      .restaurantcontainer {
+        margin: 0 10%;
+      }
+    }
+  }
+
+  footer {
+    h3 {
+      display: flex;
+      justify-content: center;
+    }
+    .footelementcontainer {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  main {
+    .restaurantsection {
+      h2 {
+        margin: 1rem 21%;
+      }
+      .restaurantcontainer {
+        margin: 0 20%;
+      }
+    }
+  }
+}
