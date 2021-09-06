@@ -228,11 +228,6 @@ main {
       font-weight: bold;
       color: black;
       transition-duration: 0.3s;
-      &:hover {
-        @include shadowdarker;
-        background: #f5edff;
-        transition-duration: 0.5s;
-      }
       .rond {
         display: flex;
         justify-content: center;
@@ -256,7 +251,15 @@ main {
         }
         i {
           font-size: 1.2rem;
-          opacity: 60%;
+          color: $grey;
+        }
+      }
+      &:hover {
+        @include shadowdarker;
+        background: #f5edff;
+        transition-duration: 0.5s;
+        i {
+          color: $violet;
         }
       }
     }

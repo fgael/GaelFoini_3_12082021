@@ -202,6 +202,7 @@ main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitu
   overflow: hidden;
   width: 100%;
   border-radius: 1rem;
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 8px -5px rgba(0, 0, 0, 0.7);
 }
 main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitule .icone {
   width: 5rem;
@@ -221,6 +222,9 @@ main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitu
   background: white;
   transition-duration: 0.5s;
 }
+main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitule:hover {
+  cursor: pointer;
+}
 main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitule:hover .icone {
   margin-right: 0;
   transition-duration: 0.5s;
@@ -231,7 +235,7 @@ main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitu
   transition-duration: 0.5s;
 }
 main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitule .listintitule {
-  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 8px -5px rgba(0, 0, 0, 0.7);
   display: flex;
   gap: 0.4rem;
   background: white;
@@ -520,7 +524,7 @@ header {
   flex-direction: column;
 }
 header .logo {
-  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 8px -5px rgba(0, 0, 0, 0.7);
   position: relative;
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -599,7 +603,7 @@ main .workingsection .workinglist {
   margin: 2rem;
 }
 main .workingsection a {
-  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 8px -5px rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   border-radius: 1.5rem;
@@ -611,11 +615,6 @@ main .workingsection a {
   font-weight: bold;
   color: black;
   transition-duration: 0.3s;
-}
-main .workingsection a:hover {
-  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 20px -3px rgba(0, 0, 0, 0.7);
-  background: #f5edff;
-  transition-duration: 0.5s;
 }
 main .workingsection a .rond {
   display: flex;
@@ -641,7 +640,15 @@ main .workingsection a .workingcontent p {
 }
 main .workingsection a .workingcontent i {
   font-size: 1.2rem;
-  opacity: 60%;
+  color: #656565;
+}
+main .workingsection a:hover {
+  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 3px 15px -3px rgba(0, 0, 0, 0.7);
+  background: #f5edff;
+  transition-duration: 0.5s;
+}
+main .workingsection a:hover i {
+  color: #9356dc;
 }
 main .restaurantsection {
   background: #f6f6f6;
@@ -654,7 +661,7 @@ main .restaurantsection h2 {
   margin: 0rem 0 1rem 1.2rem;
 }
 main .restaurantsection .restaurantcard {
-  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.3px 1.3px -5px rgba(0, 0, 0, 0.35), 0 2px 8px -5px rgba(0, 0, 0, 0.7);
   display: grid;
   position: relative;
   grid-template-columns: auto;
@@ -664,7 +671,7 @@ main .restaurantsection .restaurantcard {
   transition-duration: 0.3s;
 }
 main .restaurantsection .restaurantcard:hover {
-  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 20px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 3px 15px -3px rgba(0, 0, 0, 0.7);
   transition-duration: 0.5s;
 }
 main .restaurantsection .restaurantcard img {
