@@ -99,9 +99,10 @@ main {
             overflow: hidden;
             width: 100%;
             border-radius: 1rem;
+            @include shadow;
             .icone {
               width: 5rem;
-              background: #99e2d0;
+              background: $bggreen;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -110,7 +111,7 @@ main {
               margin-right: -5rem;
               > i {
                 font-size: 1rem;
-                color: #99e2d0;
+                color: $bggreen;
                 padding: 0.2rem;
                 border-radius: 50%;
                 background: white;
@@ -118,6 +119,7 @@ main {
               }
             }
             &:hover {
+              cursor: pointer;
               .icone {
                 margin-right: 0;
                 transition-duration: 0.5s;
