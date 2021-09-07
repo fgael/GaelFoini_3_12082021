@@ -151,6 +151,9 @@ header {
     text-align: center;
     font-size: 1.9rem;
     padding: 1rem 0 0.3rem 0;
+    a {
+      text-decoration: none;
+    }
   }
 
   .placefinder {
@@ -173,32 +176,31 @@ header {
       }
     }
   }
-
-  .discover {
-    background: $bggrey;
-  }
-
-  .restaurantdiscover {
-    margin: 2.5rem 1rem 4.6rem 1rem;
-    text-align: center;
-    h2 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 0 2rem 0.7rem 2rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: $grey;
-      margin-bottom: 2.8rem;
-    }
-    a {
-      @include btngradient;
-    }
-  }
 }
 
 main {
+  .discover {
+    .restaurantdiscover {
+      background: $bggrey;
+      padding: 2.5rem 1rem 4.6rem 1rem;
+      text-align: center;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 2rem 0.7rem 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: $grey;
+        margin-bottom: 2.8rem;
+      }
+      a {
+        @include btngradient;
+      }
+    }
+  }
+
   .workingsection {
     margin-bottom: 4.3rem;
     margin-top: 3rem;
