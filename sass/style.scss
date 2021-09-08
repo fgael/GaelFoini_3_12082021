@@ -9,6 +9,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 
+  /* Loader animation */
   .loadercontainer {
     width: 100%;
     height: 100%;
@@ -18,6 +19,7 @@ body {
     animation: loaderload 0.5s;
     animation-delay: 2.5s;
     animation-fill-mode: both;
+    /* Loader position */
     .loader {
       position: absolute;
       top: 50%;
@@ -26,10 +28,12 @@ body {
       width: 150px;
       height: 150px;
       background: $bgmidgrey;
+      /* circle */
       .face {
         position: absolute;
         border: 3px solid $bgmidgrey;
       }
+      /* big circle */
       .face1 {
         top: 0;
         left: 0;
@@ -48,6 +52,7 @@ body {
           }
         }
       }
+      /* medium circle */
       .face2 {
         top: 30px;
         left: 30px;
@@ -65,6 +70,7 @@ body {
           }
         }
       }
+      /* small circle */
       .face3 {
         top: 60px;
         left: 60px;
@@ -82,6 +88,7 @@ body {
           }
         }
       }
+      /* dot circle */
       .circle {
         position: absolute;
         top: 50%;
@@ -102,6 +109,7 @@ body {
     }
   }
 
+  /* circle animation */
   @keyframes animate {
     0% {
       transform: rotate(0deg);
@@ -111,6 +119,7 @@ body {
     }
   }
 
+  /* loader visibility animation */
   @keyframes loaderload {
     0% {
       opacity: 1;
@@ -123,12 +132,14 @@ body {
   }
 }
 
+/* loader intégration animation */
 #bodyindex {
   animation: bodyhidden 0.5s;
   animation-delay: 2.5s;
   animation-fill-mode: both;
 }
 
+/* loader and scroll hide animation */
 @keyframes bodyhidden {
   0% {
     visibility: hidden;
@@ -258,7 +269,7 @@ main {
       }
       &:hover {
         @include shadowdarker;
-        background: #f5edff;
+        background: $working;
         transition-duration: 0.5s;
         i {
           color: $violet;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -83,6 +84,7 @@ header .logo h1 {
 }
 header .logo a {
   color: #353535;
+  /* back arrow position */
 }
 header .logo a i {
   position: absolute;
@@ -122,13 +124,15 @@ main .menucontainer .menucontainerwithoutbg .menutitle h2 {
 main .menucontainer .menucontainerwithoutbg .menutitle label {
   font-size: 1.5rem;
   padding-right: 1.5rem;
+  /* hearth animation gradient */
+  /* heart animation black*/
 }
 main .menucontainer .menucontainerwithoutbg .menutitle label .fas {
   font-family: "Font Awesome 5 Free";
   font-size: 1.7rem;
   font-weight: 100;
   color: black;
-  animation: heartanimblack 0.5s;
+  animation: heartanimblack 1.2s;
 }
 main .menucontainer .menucontainerwithoutbg .menutitle label input {
   visibility: hidden;
@@ -159,25 +163,20 @@ main .menucontainer .menucontainerwithoutbg .menutitle label:hover {
     opacity: 1;
   }
 }
+main .menucontainer .menucontainerwithoutbg .listmenu {
+  /* fade list animation with delay between each one for menu apparition */
+}
 main .menucontainer .menucontainerwithoutbg .listmenu .entrees {
-  animation: fadelist ease-in 1s;
+  animation: fadelist 1s ease-in 0.2s forwards;
   opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
 }
 main .menucontainer .menucontainerwithoutbg .listmenu .plat {
-  animation: fadelist ease-in 1s;
+  animation: fadelist 1s ease-in 0.4s forwards;
   opacity: 0;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
 }
 main .menucontainer .menucontainerwithoutbg .listmenu .desserts {
-  animation: fadelist ease-in 1s;
+  animation: fadelist 1s ease-in 0.6s forwards;
   opacity: 0;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
 }
 main .menucontainer .menucontainerwithoutbg .listmenu p {
   font-size: 1rem;
@@ -271,20 +270,9 @@ main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitu
 main .menucontainer .menucontainerwithoutbg .listmenu .listplat .containerintitule .listintitule .prix p {
   font-size: 1rem;
 }
-@keyframes fadelist {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 main .orderbtn {
-  animation: fadelist ease-in 1s;
+  animation: fadelist 1s ease-in 0.8s forwards;
   opacity: 0;
-  animation-delay: 0.8s;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
   text-align: center;
   padding: 1rem 0 6.4rem 0;
 }
@@ -305,10 +293,17 @@ main .orderbtn a:hover {
   filter: brightness(110%);
   background: -webkit-gradient(linear, left top, left bottom, from #ff79da, to #9356dc);
   transition-duration: 0.5s;
-  opacity: 0.9;
   box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 17px -3px rgba(0, 0, 0, 0.7);
 }
 
+@keyframes fadelist {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (min-width: 768px) {
   header .logo a i {
     margin-left: -40%;
@@ -395,6 +390,9 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  /* Loader animation */
+  /* circle animation */
+  /* loader visibility animation */
 }
 body .loadercontainer {
   width: 100%;
@@ -405,6 +403,7 @@ body .loadercontainer {
   animation: loaderload 0.5s;
   animation-delay: 2.5s;
   animation-fill-mode: both;
+  /* Loader position */
 }
 body .loadercontainer .loader {
   position: absolute;
@@ -414,6 +413,11 @@ body .loadercontainer .loader {
   width: 150px;
   height: 150px;
   background: #eaeaea;
+  /* circle */
+  /* big circle */
+  /* medium circle */
+  /* small circle */
+  /* dot circle */
 }
 body .loadercontainer .loader .face {
   position: absolute;
@@ -507,12 +511,14 @@ body .loadercontainer .loader .circle:before {
   }
 }
 
+/* loader intégration animation */
 #bodyindex {
   animation: bodyhidden 0.5s;
   animation-delay: 2.5s;
   animation-fill-mode: both;
 }
 
+/* loader and scroll hide animation */
 @keyframes bodyhidden {
   0% {
     visibility: hidden;
@@ -590,7 +596,6 @@ main .discover .restaurantdiscover a:hover {
   filter: brightness(110%);
   background: -webkit-gradient(linear, left top, left bottom, from #ff79da, to #9356dc);
   transition-duration: 0.5s;
-  opacity: 0.9;
   box-shadow: 0 0.3px 2.5px -3px rgba(0, 0, 0, 0.35), 0 2px 17px -3px rgba(0, 0, 0, 0.7);
 }
 main .workingsection {
@@ -728,13 +733,15 @@ main .restaurantsection label {
   grid-area: label;
   justify-content: center;
   align-items: center;
+  /* hearth animation gradient */
+  /* heart animation black*/
 }
 main .restaurantsection label .fas {
   font-family: "Font Awesome 5 Free";
   font-size: 1.7rem;
   font-weight: 100;
   color: black;
-  animation: heartanimblack 0.5s;
+  animation: heartanimblack 1.2s;
 }
 main .restaurantsection label input {
   visibility: hidden;
